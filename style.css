@@ -1,0 +1,193 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Body Styling */
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #222;
+    color: white;
+    padding: 20px;
+}
+
+/* Container */
+.container {
+    width: 100%;
+    max-width: 400px;
+    background: #333;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    text-align: center;
+}
+
+/* Clock Display */
+.clock {
+    font-size: 20px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+/* Input Section */
+.input-section {
+    display: flex;
+    gap: 10px;
+}
+
+.input-section input {
+    font-size: 15px;
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.input-section button {
+    background: #ff4b2b;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s ease-in-out;
+}
+
+.input-section button:hover {
+    background: #e63e20;
+}
+
+/* Task List */
+ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+li {
+    text-align: left;
+    background: #444;
+    margin: 10px 0;
+    padding: 10px;
+    display: flex;
+    align-items: center; /* Centers the checkbox vertically */
+    gap: 10px; /* Space between the checkbox and description */
+    justify-content: flex-start;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+    word-wrap: break-word; /* Ensures text wraps */
+    overflow-wrap: break-word; /* Handles long words */
+    width: 100%; /* Ensures the task fits within the container width */
+    box-sizing: border-box; /* Ensures padding is considered in width */
+}
+
+/* Task Description */
+li .taskList {
+    flex-grow: 1; /* Allows text to take available space */
+    text-align: left; /* Left-aligns the task description */
+    white-space: normal; /* Allows text to wrap */
+    word-break: break-word; /* Ensures words break if too long */
+    overflow-wrap: break-word; /* Handles long words */
+}
+
+/* Checkbox styling */
+li input[type="checkbox"] {
+    margin-right: 10px; /* Space between the checkbox and the task description */
+}
+
+
+
+li.checked {
+    text-decoration: line-through;
+    background: #666;
+}
+
+/* Controls */
+.controls {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.controls button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: #ff4b2b;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.controls button:hover {
+    background: #e63e20;
+}
+
+/* Responsive Design */
+@media (max-width: 500px) {
+    .input-section {
+        flex-direction: column;
+    }
+
+    .input-section input {
+        width: 100%;
+    }
+}
+
+
+
+/* Footer Styles */
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+    margin: 10px;
+}
+
+.footer-section a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-section a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-section {
+        text-align: center;
+    }
+}
